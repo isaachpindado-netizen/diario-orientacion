@@ -1,5 +1,5 @@
 /* Diario de orientación: works offline. Bump VERSION on every release. */
-const VERSION = 'diario-3.0.0';
+const VERSION = 'diario-3.1.0';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 const OPTIONAL = [];
 self.addEventListener('install', e => {

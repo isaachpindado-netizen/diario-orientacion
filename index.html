@@ -259,6 +259,24 @@ details[open] summary{margin-bottom:8px}
 .maps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .map-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;padding:0;text-align:left;cursor:pointer;color:var(--ink)}
 .map-card:hover{border-color:var(--ink-2)}
+.mc-w{display:flex;flex-direction:column;gap:4px}.mc-cover{font-size:12px;font-weight:700;color:var(--accent-text);padding:2px 4px}.mc-set{font-size:12.5px;align-self:flex-start;padding:2px 4px}
+.maps-grid.gal{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+#mg-q{width:100%;box-sizing:border-box;min-height:48px;border:1px solid var(--field-line);border-radius:12px;padding:0 14px;background:var(--field);font:inherit;font-size:16px;color:var(--ink)}
+.cover{position:relative;border-radius:18px;overflow:hidden;background:var(--sunk);min-height:200px;display:flex;align-items:flex-end}
+.cover > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.cover-in{position:relative;width:100%;padding:56px 16px 14px;background:linear-gradient(to top,rgba(20,20,18,.88),rgba(20,20,18,.55) 60%,rgba(20,20,18,0));color:#fff;display:flex;flex-direction:column;gap:6px}
+.cover-in .eyebrow{color:#F6DCEA;margin:0}.cover-in h1{color:#fff;margin:0}.cover-in .det-meta,.cover-in .det-meta span{color:#fff}.cover-l{margin:0;font-size:14px;color:#EDEAE2}
+.cover-open{position:absolute;top:10px;right:10px;min-height:36px;padding:0 12px;border-radius:18px;border:0;background:rgba(255,255,255,.92);color:#1C1C1A;font:600 13px var(--f-body);cursor:pointer}
+.race-row.has-thumb{grid-template-columns:46px 52px minmax(0,1fr) auto}
+.rr-thumb{width:52px;height:52px;border-radius:10px;object-fit:cover;background:var(--sunk)}
+.ph-row{display:flex;flex-wrap:wrap;gap:8px}.ph{position:relative}.ph-b{display:block;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--sunk)}
+.ph-b img{display:block;width:76px;height:76px;object-fit:cover}
+.ph-x{position:absolute;top:-8px;right:-8px;width:28px;height:28px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:16px;line-height:1;cursor:pointer}
+.ph-add{display:flex;align-items:center;justify-content:center;width:78px;height:78px;border:1.5px dashed var(--field-line);border-radius:10px;color:var(--accent-text);font-weight:700;font-size:13px;cursor:pointer}
+.er-ph{display:flex;gap:6px;margin-top:6px;align-items:center}.er-ph img{width:44px;height:44px;border-radius:8px;object-fit:cover;background:var(--sunk)}.er-ph span{font-size:12px;color:var(--muted)}
+.lightbox{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) 12px max(16px,env(safe-area-inset-bottom,0px))}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain}
+.lb-x{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;width:44px;height:44px;border-radius:22px;border:0;background:rgba(255,255,255,.9);font-size:22px;cursor:pointer}
 .map-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--m-ground);max-width:100%}
 img.broken{visibility:hidden}
 .mc-b{padding:8px 10px;display:flex;flex-direction:column;font-size:12.5px;color:var(--muted);gap:1px}
@@ -371,9 +389,10 @@ img.broken{visibility:hidden}
 .seg2{display:inline-grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;background:var(--sunk);border-radius:12px;padding:4px}
 .seg2 button{min-height:38px;padding:0 16px;border:0;border-radius:9px;background:transparent;color:var(--muted);font-weight:600;font-size:14px;cursor:pointer}
 .seg2 button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.1)}
-.rw-row{display:grid;grid-template-columns:50px 66px minmax(0,1fr) 40px;gap:8px;align-items:center}
+.rw-row{display:grid;grid-template-columns:42px 52px minmax(0,1fr) auto 32px;gap:4px;align-items:center}
+.rw-row .icon-btn{width:32px;min-width:32px;height:40px}.mv{display:flex;gap:0}.mv .icon-btn[disabled]{opacity:.3;cursor:default}.rw-row span.h-t{font-size:14px;letter-spacing:-.01em;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}.rw-row input[type=number]{padding-inline:6px;text-align:center;-moz-appearance:textfield;appearance:textfield}.rw-row input[type=number]::-webkit-inner-spin-button,.rw-row input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .rw-row .h-t{font-size:20px}
-.rw-head{display:grid;grid-template-columns:50px 66px minmax(0,1fr) 40px;gap:8px;font-size:12px;color:var(--muted);font-weight:600}
+.rw-head{display:grid;grid-template-columns:42px 52px minmax(0,1fr) 64px 32px;gap:4px;font-size:12px;color:var(--muted);font-weight:600}
 .rs{gap:14px}
 .rs-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:12px;border-bottom:1px dashed var(--field-line)}
 .rs-hora{font-family:var(--f-display);font-weight:700;font-size:54px;line-height:.85;font-variant-numeric:tabular-nums;color:var(--accent-text)}
@@ -430,6 +449,7 @@ img.broken{visibility:hidden}
     <nav class="tabs-top" aria-label="Secciones">
       <a href="#inicio" data-act="nav" data-view="inicio" data-tab="inicio">Inicio</a>
       <a href="#carreras" data-act="nav" data-view="carreras" data-tab="carreras">Carreras</a>
+      <a href="#mapas" data-act="nav" data-view="mapas" data-tab="mapas">Mapas</a>
       <a href="#temporada" data-act="nav" data-view="temporada" data-tab="temporada">Temporada</a>
       <a href="#datos" data-act="nav" data-view="datos" data-tab="datos">Datos</a>
     </nav>
@@ -440,6 +460,7 @@ img.broken{visibility:hidden}
 <nav class="tabbar" aria-label="Secciones">
   <a href="#inicio" data-act="nav" data-view="inicio" data-tab="inicio"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Inicio</a>
   <a href="#carreras" data-act="nav" data-view="carreras" data-tab="carreras"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>Carreras</a>
+  <a href="#mapas" data-act="nav" data-view="mapas" data-tab="mapas"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg>Mapas</a>
   <a href="#temporada" data-act="nav" data-view="temporada" data-tab="temporada"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-5"/><path d="M12 16V7"/><path d="M17 16v-8"/></svg>Temporada</a>
   <a href="#datos" data-act="nav" data-view="datos" data-tab="datos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8 6 6 0 0 0-11.5 1.5A3.5 3.5 0 0 0 7 18z"/></svg>Datos</a>
 </nav>
@@ -664,7 +685,7 @@ const TIP_CAUSA = {
 };
 const DEFAULT_CONFIG = {
   corredor: '', umbral: 10,
-  calentamiento: [{ min: 45, txt: 'Cambiarse' }, { min: 35, txt: 'Rodar suave' }, { min: 20, txt: 'Cambios de ritmo' }, { min: 8, txt: 'Pre-salida' }, { min: 0, txt: 'Salida' }],
+  calentamiento: [{ min: 35, txt: 'Calentamiento' }, { min: 10, txt: 'Cambio de tercio' }, { min: 3, txt: 'Me llaman' }, { min: 0, txt: 'Salida' }],
   checklist: '## Material\nZapatillas\nBrújula y chip\n## En la pre-salida\nLeer las descripciones de control',
   focos: []
 };
@@ -685,7 +706,7 @@ function defPrevia() {
     { id: 'objetivo', tipo: 'linea', titulo: 'Objetivo', ayuda: 'Qué quieres conseguir: resultado, sensaciones…' },
     { id: 'foco', tipo: 'foco', titulo: 'Foco', ayuda: 'Una frase para toda la carrera' },
     { id: 'hora', tipo: 'horario', titulo: 'Hora de salida y calentamiento' },
-    { id: 'energia', tipo: 'escala', titulo: 'Energía', lo: 'muy baja', hi: 'a tope' },
+    { id: 'energia', tipo: 'escala', titulo: 'Sensación física', lo: 'muy mala', hi: 'muy buena' },
     { id: 'confianza', tipo: 'escala', titulo: 'Confianza', lo: 'muy baja', hi: 'a tope' },
     { id: 'sensaciones', tipo: 'texto', titulo: 'Cómo me siento', ayuda: 'Sueño, piernas, nervios, molestias…', filas: 2 },
     { id: 'plan', tipo: 'texto', titulo: 'Plan', ayuda: 'Terreno, rutas, controles clave, riesgos, avituallamiento', filas: 5 },
@@ -693,12 +714,17 @@ function defPrevia() {
     { id: 'aprendizajes', tipo: 'aprendizajes', titulo: 'Repasa tus aprendizajes' }
   ];
 }
-function cfgPrevia() { return Array.isArray(S.config.previa) && S.config.previa.length ? S.config.previa : defPrevia(); }
+function cfgPrevia() { const pv = Array.isArray(S.config.previa) && S.config.previa.length ? S.config.previa : defPrevia(); return pv.map(b => b.id === 'energia' && b.titulo === 'Energía' ? Object.assign({}, b, { titulo: 'Sensación física', lo: 'muy mala', hi: 'muy buena' }) : b); }
 function tax(k) { const t = S.config.tax && S.config.tax[k]; return Array.isArray(t) && t.length ? t : DEF_TAX[k]; }
 const taxVals = k => tax(k).map(o => o.v);
 const taxDesc = (k, v) => { const o = tax(k).find(x => x.v === v); return o && o.d ? o.d : ''; };
+const fasesOf = e => Array.isArray(e.fase) ? e.fase.filter(Boolean) : (e.fase ? [e.fase] : []);
+const faseTxt = e => fasesOf(e).join(' + ');
+const faseShare = (e, f) => { const fs = fasesOf(e); return fs.indexOf(f) >= 0 ? (+e.seg || 0) / fs.length : 0; };
 const isMental = v => !!(tax('porque').find(x => x.v === v) || {}).mental;
-function warmDefault(tipo) { const t = S.config.calentamientoTipos || {}; return (tipo && Array.isArray(t[tipo]) && t[tipo].length) ? t[tipo] : (S.config.calentamiento || DEFAULT_CONFIG.calentamiento); }
+const OLD_WARM = JSON.stringify([{ min: 45, txt: 'Cambiarse' }, { min: 35, txt: 'Rodar suave' }, { min: 20, txt: 'Cambios de ritmo' }, { min: 8, txt: 'Pre-salida' }, { min: 0, txt: 'Salida' }]);
+function migrate31() { if (S.config.calentamiento && JSON.stringify(S.config.calentamiento) === OLD_WARM) saveConfig({ calentamiento: clone(DEFAULT_CONFIG.calentamiento) }); }
+function warmDefault(tipo) { if (S.config.calentamiento && JSON.stringify(S.config.calentamiento) === OLD_WARM) migrate31(); const t = S.config.calentamientoTipos || {}; return (tipo && Array.isArray(t[tipo]) && t[tipo].length) ? t[tipo] : (S.config.calentamiento || DEFAULT_CONFIG.calentamiento); }
 function warmOf(r) { const a = r && r.antes; return (a && Array.isArray(a.calentamiento) && a.calentamiento.length) ? a.calentamiento : warmDefault(r && r.tipo); }
 
 /* ---------- state ---------- */
@@ -837,8 +863,10 @@ function raceRow(r, tab) {
   if (e === 'Analizada' && st.errs.length) side = '<span class="rr-loss">' + esc(fmtT(st.lost)) + '</span><span class="rr-loss-l">en errores</span>';
   else if (e === 'Analizada' && st.v) side = pill(st.v);
   else side = estadoPill(r);
-  return '<button type="button" class="race-row" data-act="open-race" data-id="' + esc(r.id) + '"' + (tab ? ' data-tab="' + tab + '"' : '') + '>' +
+  const cv = coverOf(r);
+  return '<button type="button" class="race-row' + (cv ? ' has-thumb' : '') + '" data-act="open-race" data-id="' + esc(r.id) + '"' + (tab ? ' data-tab="' + tab + '"' : '') + '>' +
     '<span class="date-blk"><b>' + (d ? d.getDate() : '–') + '</b><span>' + (d ? esc(DWD.format(d).replace('.', '')) : '') + '</span></span>' +
+    (cv ? '<img class="rr-thumb" src="' + esc(window.__ODB.url(cv.assetId)) + '" alt="" loading="lazy" data-fallback>' : '') +
     '<span class="rr-main"><span class="rr-name">' + esc(r.nombre || 'Sin nombre') + '</span><span class="rr-meta">' + esc(meta) + '</span></span>' +
     '<span class="rr-side">' + side + '</span></button>';
 }
@@ -940,13 +968,35 @@ VIEWS.carrera = function () {
     '<div class="seg" role="tablist" aria-label="Partes de la carrera">' + tabs.map(([k, l]) => '<button type="button" role="tab" data-act="race-tab" data-tab="' + k + '" aria-selected="' + (S.raceTab === k) + '">' + l + (k === 'errores' || k === 'mapas' ? '<span class="c" data-cnt="' + k + '">' + tabCount(r, k) + '</span>' : '') + '</button>').join('') + '</div>' +
     '<div id="det-body" role="tabpanel">' + tabBody(r) + '</div>';
 };
+VIEWS.mapas = function () {
+  const n = S.maps.size;
+  let h = '<header class="page-h"><p class="eyebrow">Archivo</p><h1 class="h-display">Mapas</h1></header>';
+  if (!n) return h + '<div class="empty"><p>Aún no hay mapas. Súbelos desde cada carrera: salen aquí, con los datos de la carrera, para encontrarlos rápido.</p></div>';
+  return h + '<div class="field"><label class="sr" for="mg-q">Buscar</label><input id="mg-q" type="search" placeholder="Buscar por carrera, zona, tipo o año" value="' + esc(S.mgq || '') + '" autocomplete="off"></div><div id="mg-grid">' + galleryGrid() + '</div>';
+};
+function galleryGrid() {
+  const q = (S.mgq || '').trim().toLowerCase();
+  const items = Array.from(S.maps.values()).map(m => ({ m, r: S.races.get(m.carreraId) || {} })).filter(x => !q || [x.r.nombre, x.r.zona, x.r.tipo, x.r.fecha, x.m.nombre].filter(Boolean).join(' ').toLowerCase().indexOf(q) >= 0)
+    .sort((a, b) => (b.r.fecha || '').localeCompare(a.r.fecha || '') || (a.m.creado || '').localeCompare(b.m.creado || ''));
+  if (!items.length) return '<div class="empty"><p>Ningún mapa coincide con la búsqueda.</p></div>';
+  return '<div class="maps-grid gal">' + items.map(x => '<button type="button" class="map-card" data-act="map-open" data-id="' + esc(x.m.id) + '"><img src="' + esc(window.__ODB.url(x.m.assetId)) + '" alt="" loading="lazy" data-fallback><span class="mc-b"><b>' + esc(x.r.nombre || x.m.nombre || 'Mapa') + '</b><span>' + esc([fmtDate(x.r.fecha), x.r.tipo].filter(Boolean).join(' · ')) + '</span>' + (courseLine(x.r) ? '<span>' + esc(courseLine(x.r)) + '</span>' : '') + '</span></button>').join('') + '</div>';
+}
 function tabCount(r, k) { const n = k === 'errores' ? errsOf(r.id).length : mapsOf(r.id).length; return n ? String(n) : ''; }
+function coverOf(r) { const m = r && r.portada && S.maps.get(r.portada); if (m && m.carreraId === r.id) return m; return r ? mapsOf(r.id)[0] || null : null; }
+function courseLine(r) { return [r.km ? String(r.km).replace('.', ',') + ' km' : '', r.desnivel ? r.desnivel + ' m' : '', r.controles ? r.controles + ' controles' : ''].filter(Boolean).join(' · '); }
 function detHeader(r) {
   const st = statsOf(r); const e = estadoDe(r);
   const meta = [fmtDate(r.fecha), r.tipo, r.zona].filter(Boolean).join(' · ');
-  const line = resLine(r);
+  const line = resLine(r); const cv = coverOf(r); const course = courseLine(r);
+  const can = !!S.cap.assets;
+  if (cv) return '<div class="cover"><img src="' + esc(window.__ODB.url(cv.assetId)) + '" alt="" data-fallback><div class="cover-in"><p class="eyebrow">' + esc(meta) + '</p><h1 class="h-2">' + esc(r.nombre || 'Sin nombre') + '</h1>' +
+      (course ? '<p class="cover-l">' + esc(course) + '</p>' : '') + ((line || st.v) ? '<div class="det-meta">' + (line ? '<span>' + esc(line) + '</span>' : '') + pill(st.v) + '</div>' : '') +
+      '</div><button type="button" class="cover-open" data-act="map-open" data-id="' + esc(cv.id) + '">Abrir mapa</button></div>' +
+    '<div class="chips" data-group role="group" aria-label="Estado">' + ESTADOS.map(x => '<button type="button" class="chip chip-sm" data-act="set" data-path="estado" data-val="' + x + '" aria-pressed="' + (e === x) + '">' + x + '</button>').join('') + '</div>';
   return '<p class="eyebrow">' + esc(meta) + '</p><h1 class="h-2">' + esc(r.nombre || 'Sin nombre') + '</h1>' +
+    (course ? '<p class="small muted" style="margin:0">' + esc(course) + '</p>' : '') +
     ((line || st.v) ? '<div class="det-meta">' + (line ? '<span>' + esc(line) + '</span>' : '') + pill(st.v) + '</div>' : '') +
+    (can ? '<div><label class="link file-btn">+ Añadir el mapa de la carrera<input type="file" id="cover-file" class="file-in" accept="image/*,application/pdf"></label></div>' : '') +
     '<div class="chips" data-group role="group" aria-label="Estado">' + ESTADOS.map(x => '<button type="button" class="chip chip-sm" data-act="set" data-path="estado" data-val="' + x + '" aria-pressed="' + (e === x) + '">' + x + '</button>').join('') + '</div>';
 }
 function tabBody(r) { return S.raceTab === 'resultado' ? tabResultado(r) : S.raceTab === 'errores' ? tabErrores(r) : S.raceTab === 'mapas' ? tabMapas(r) : tabAntes(r); }
@@ -988,12 +1038,26 @@ function anteEdit(r) {
   }).join('') + '</div>';
 }
 const warmKey = s => (s.min === '' || s.min == null) ? -1 : +s.min;
+function sortSteps(st) { return st.sort((x, y) => warmKey(y) - warmKey(x)); }
+function moveTxt(st, i, d) { const j = i + d; if (j < 0 || j >= st.length) return st; const t = st[i].txt; st[i].txt = st[j].txt; st[j].txt = t; return st; }
+function mvBtns(p, i, n) { return '<button type="button" class="icon-btn" data-act="' + p + '-mv" data-i="' + i + '" data-d="-1" aria-label="Subir este paso"' + (i === 0 ? ' disabled' : '') + '>↑</button><button type="button" class="icon-btn" data-act="' + p + '-mv" data-i="' + i + '" data-d="1" aria-label="Bajar este paso"' + (i === n - 1 ? ' disabled' : '') + '>↓</button>'; }
+function nrCdHtml() {
+  const N = S.newRace; const hEl = $('#s-hora'); const base = hhmm(hEl ? hEl.value : ''); const st = N.steps;
+  return '<div class="rw-head" aria-hidden="true"><span>Hora</span><span>Min</span><span>Qué haces</span><span></span><span></span></div>' +
+    st.map((s, i) => '<div class="rw-row"><span class="h-t" data-nt="' + i + '">' + (base != null && s.min !== '' ? clockAt(base, s.min) : '–') + '</span><input type="number" min="0" max="300" inputmode="numeric" aria-label="Minutos antes de la salida" data-ni="' + i + '" data-nk="min" value="' + esc(s.min) + '"><input aria-label="Qué haces" data-ni="' + i + '" data-nk="txt" value="' + esc(s.txt) + '" autocomplete="off"><span class="mv">' + mvBtns('nr', i, st.length) + '</span><button type="button" class="icon-btn" data-act="nr-del" data-i="' + i + '" aria-label="Quitar este paso">×</button></div>').join('') +
+    '<div class="row-gap"><button type="button" class="link" data-act="nr-add">+ Añadir paso</button></div><p class="hint">Solo para esta carrera. Las flechas cambian el orden de los pasos; los minutos se quedan donde están.</p>';
+}
+function nrEdit(el) {
+  const N = S.newRace; if (!N) return; const i = +el.dataset.ni, k = el.dataset.nk; const s = N.steps[i]; if (!s) return; N.cdTouched = true;
+  s[k] = k === 'min' ? (el.value === '' ? '' : Math.max(0, parseInt(el.value, 10) || 0)) : el.value;
+  if (k === 'min') { const base = hhmm(($('#s-hora') || {}).value); const lab = document.querySelector('[data-nt="' + i + '"]'); if (lab) lab.textContent = base != null && s.min !== '' ? clockAt(base, s.min) : '–'; }
+}
 function warmEditHtml(r) {
   const a = r.antes || {}; const own = Array.isArray(a.calentamiento) && a.calentamiento.length;
   S.rw = { raceId: r.id, steps: clone(warmOf(r)).sort((x, y) => warmKey(y) - warmKey(x)) };
   const base = hhmm(a.hora); const tipoDef = r.tipo && (S.config.calentamientoTipos || {})[r.tipo];
-  return '<div class="sec" style="gap:8px"><div class="rw-head" aria-hidden="true"><span>Hora</span><span>Min antes</span><span>Qué haces</span><span></span></div>' +
-    S.rw.steps.map((s, i) => '<div class="rw-row"><span class="h-t" data-rt="' + i + '">' + (base != null && s.min !== '' ? clockAt(base, s.min) : '–') + '</span><input type="number" id="rw-min-' + i + '" min="0" max="300" inputmode="numeric" aria-label="Minutos antes de la salida" data-wi="' + i + '" data-wk="min" value="' + esc(s.min) + '"><input id="rw-txt-' + i + '" aria-label="Qué haces" data-wi="' + i + '" data-wk="txt" value="' + esc(s.txt) + '" autocomplete="off"><button type="button" class="icon-btn" data-act="rw-del" data-i="' + i + '" aria-label="Quitar este paso">×</button></div>').join('') + '</div>' +
+  return '<div class="sec" style="gap:8px"><div class="rw-head" aria-hidden="true"><span>Hora</span><span>Min</span><span>Qué haces</span><span></span><span></span></div>' +
+    S.rw.steps.map((s, i) => '<div class="rw-row"><span class="h-t" data-rt="' + i + '">' + (base != null && s.min !== '' ? clockAt(base, s.min) : '–') + '</span><input type="number" id="rw-min-' + i + '" min="0" max="300" inputmode="numeric" aria-label="Minutos antes de la salida" data-wi="' + i + '" data-wk="min" value="' + esc(s.min) + '"><input id="rw-txt-' + i + '" aria-label="Qué haces" data-wi="' + i + '" data-wk="txt" value="' + esc(s.txt) + '" autocomplete="off"><span class="mv">' + mvBtns('rw', i, S.rw.steps.length) + '</span><button type="button" class="icon-btn" data-act="rw-del" data-i="' + i + '" aria-label="Quitar este paso">×</button></div>').join('') + '</div>' +
     '<div class="row-gap"><button type="button" class="link" data-act="rw-add">+ Añadir paso</button>' + (own ? '<button type="button" class="link" data-act="rw-reset">Volver al horario por defecto</button>' : '') + '</div>' +
     '<p class="hint">' + (own ? 'Este horario es solo de esta carrera.' : 'Es tu horario por defecto' + (tipoDef ? ' de ' + esc(r.tipo) : '') + '. Si lo cambias aquí, solo cambia en esta carrera.') + '</p>' +
     '<div class="row-gap"><span class="hint">Usar este horario por defecto:</span><button type="button" class="btn btn-ghost btn-sm" data-act="rw-def" data-k="all">En todas</button>' + (r.tipo ? '<button type="button" class="btn btn-ghost btn-sm" data-act="rw-def" data-k="tipo">En ' + esc(r.tipo) + '</button>' : '') + '</div>';
@@ -1082,10 +1146,11 @@ function errListHtml(r) {
   if (!errs.length) return '<div class="empty"><p>Sin errores apuntados. Añádelos a mano o sube los splits y clasifica los tramos donde perdiste tiempo.</p></div>';
   const linked = {};
   mapsOf(r.id).forEach(m => (m.notas || []).forEach(n => { if (n.err) linked[n.err] = true; }));
-  return '<div class="list">' + errs.map(e => '<button type="button" class="err-row" data-act="edit-error" data-id="' + esc(e.id) + '"><span class="ctl">' + esc(ctlLabel(e.control)) + '</span><span class="er-main"><span class="er-top">' + esc([e.control, e.fase, e.que].filter(Boolean).join(' · ')) + (e.senal ? '<span class="flag">Señal ignorada</span>' : '') + '</span>' +
+  return '<div class="list">' + errs.map(e => '<button type="button" class="err-row" data-act="edit-error" data-id="' + esc(e.id) + '"><span class="ctl">' + esc(ctlLabel(e.control)) + '</span><span class="er-main"><span class="er-top">' + esc([e.control, faseTxt(e), e.que].filter(Boolean).join(' · ')) + (e.senal ? '<span class="flag">Señal ignorada</span>' : '') + '</span>' +
     (e.porque ? '<span class="er-why">Por qué: ' + esc(e.porque) + (linked[e.id] ? ' · en el mapa' : '') + '</span>' : (linked[e.id] ? '<span class="er-why">En el mapa</span>' : '')) +
     (e.senal && (e.senalTipo || e.senalTxt) ? '<span class="er-why">Señal: ' + esc([e.senalTipo, e.senalTxt].filter(Boolean).join(' · ')) + '</span>' : '') +
     (e.paso ? '<span class="er-paso">' + esc(e.paso) + '</span>' : '') + (e.accion ? '<span class="er-rule">→ ' + esc(e.accion) + '</span>' : '') +
+    ((e.fotos || []).length ? '<span class="er-ph">' + e.fotos.slice(0, 4).map(a => '<img src="' + esc(window.__ODB.url(a)) + '" alt="" loading="lazy" data-fallback>').join('') + (e.fotos.length > 4 ? '<span>+' + (e.fotos.length - 4) + '</span>' : '') + '</span>' : '') +
     '</span><span class="er-s sz-' + sizeCls(e.seg) + '">' + esc(fmtLoss(e.seg)) + '</span></button>').join('') + '</div>';
 }
 function tabMapas(r) {
@@ -1099,7 +1164,9 @@ function tabMapas(r) {
 function mapsGridHtml(r) {
   const ms = mapsOf(r.id);
   if (!ms.length) return '<div class="empty"><p>Todavía no hay mapas en esta carrera.</p></div>';
-  return '<div class="maps-grid">' + ms.map(m => '<button type="button" class="map-card" data-act="map-open" data-id="' + esc(m.id) + '"><img src="' + esc(window.__ODB.url(m.assetId)) + '" alt="" loading="lazy" data-fallback><span class="mc-b"><b>' + esc(m.nombre || 'Mapa') + '</b><span>' + (m.trazos || []).length + ' trazos · ' + (m.notas || []).length + ' notas</span></span></button>').join('') + '</div>';
+  const cv = coverOf(r);
+  return '<div class="maps-grid">' + ms.map(m => '<div class="mc-w"><button type="button" class="map-card" data-act="map-open" data-id="' + esc(m.id) + '"><img src="' + esc(window.__ODB.url(m.assetId)) + '" alt="" loading="lazy" data-fallback><span class="mc-b"><b>' + esc(m.nombre || 'Mapa') + '</b><span>' + (m.trazos || []).length + ' trazos · ' + (m.notas || []).length + ' notas</span></span></button>' +
+    (ms.length > 1 ? (cv && cv.id === m.id ? '<span class="mc-cover">Portada</span>' : '<button type="button" class="link mc-set" data-act="set-cover" data-id="' + esc(m.id) + '">Usar de portada</button>') : '') + '</div>').join('') + '</div>';
 }
 
 /* ---------- splits (IOF XML) ---------- */
@@ -1282,7 +1349,7 @@ function tempRaces() {
 function insights(errs) {
   const tot = sum(errs, e => e.seg); if (!tot) return [];
   const pct = s => Math.round(s / tot * 100); const out = [];
-  const combo = {}; errs.forEach(e => { if (e.fase && e.que) combo[e.fase + '|' + e.que] = (combo[e.fase + '|' + e.que] || 0) + e.seg; });
+  const combo = {}; errs.forEach(e => { if (e.que) fasesOf(e).forEach(f => { const k = f + '|' + e.que; combo[k] = (combo[k] || 0) + faseShare(e, f); }); });
   const topC = Object.entries(combo).sort((a, b) => b[1] - a[1])[0];
   if (topC) { const fq = topC[0].split('|'); out.push({ t: fq[0] + ' · ' + fq[1], d: fmtT(topC[1]) + ' perdidos, el ' + pct(topC[1]) + ' % de todo.', r: TIP_COMBO[topC[0]] || TIP_QUE[fq[1]] }); }
   const causa = {}; errs.forEach(e => { if (e.porque && e.porque !== 'Técnica pura') causa[e.porque] = (causa[e.porque] || 0) + e.seg; });
@@ -1316,9 +1383,9 @@ function tBody() {
   const tot = sum(errs, e => e.seg); const pct = s => Math.round(s / tot * 100);
   const conErr = new Set(errs.map(e => e.carreraId)).size;
   const big = errs.filter(e => e.seg >= 60); const ign = errs.filter(e => e.senal);
-  const withData = (k, field) => { const base = taxVals(k); const extra = []; errs.forEach(e => { const v = e[field]; if (v && base.indexOf(v) < 0 && extra.indexOf(v) < 0) extra.push(v); }); return base.concat(extra); };
+  const withData = (k, field) => { const base = taxVals(k); const extra = []; errs.forEach(e => [].concat(e[field] || []).forEach(v => { if (v && base.indexOf(v) < 0 && extra.indexOf(v) < 0) extra.push(v); })); return base.concat(extra); };
   const fases = withData('fase', 'fase'); const fCls = i => 'c-f' + (i % 6);
-  const byF = {}; fases.forEach(f => { byF[f] = sum(errs.filter(e => e.fase === f), e => e.seg); });
+  const byF = {}; fases.forEach(f => { byF[f] = sum(errs, e => faseShare(e, f)); });
   const entF = fases.find(f => /entrada/i.test(f)) || fases.slice().sort((a, b) => byF[b] - byF[a])[0];
   let h = '<div class="kpis">' +
     '<div class="kpi"><span class="kpi-l">Tiempo perdido</span><span class="kpi-v">' + esc(fmtT(tot)) + '</span><span class="kpi-s">en ' + errs.length + ' errores</span></div>' +
@@ -1330,7 +1397,7 @@ function tBody() {
   // fase x qué
   const rows = withData('que', 'que').concat(['Sin clasificar']).map(q => {
     const es = errs.filter(e => q === 'Sin clasificar' ? !e.que : e.que === q);
-    const parts = fases.map(f => sum(es.filter(e => e.fase === f), e => e.seg)); const other = sum(es, e => e.seg) - sum(parts);
+    const parts = fases.map(f => sum(es, e => faseShare(e, f))); const other = sum(es, e => e.seg) - sum(parts);
     return { q, parts, other, total: sum(es, e => e.seg) };
   }).filter(r => r.total > 0).sort((a, b) => b.total - a.total);
   const maxQ = Math.max.apply(null, rows.map(r => r.total));
@@ -1374,7 +1441,7 @@ function askHtml() {
 function askPrompt(q) {
   const compact = o => { Object.keys(o).forEach(k => { if (o[k] == null || o[k] === '' || o[k] === false) delete o[k]; }); return o; };
   const races = racesArr().filter(r => (r.fecha || '') <= todayStr()).map(r => { const st = statsOf(r); const a = r.antes || {}, re = r.resultado || {}; return compact({ carrera: r.nombre, fecha: r.fecha, tipo: r.tipo, estado: estadoDe(r), km: r.km, desnivel: r.desnivel, tiempo: fmtT(re.tiempoS), gapAl1: fmtT(re.gapS), puesto: re.puesto, fisico: re.fisico, tecnico: re.tecnico, mental: re.mental, energiaAntes: a.energia, confianzaAntes: a.confianza, objetivo: a.objetivo, foco: a.foco, focoCumplido: re.focoCumplido, loQueFunciono: re.funciono, leccion: re.leccion, segundosEnErrores: st.errs.length ? st.lost : null, veredicto: st.v && st.v.label }); });
-  const errs = Array.from(S.errors.values()).map(e => compact({ carrera: (S.races.get(e.carreraId) || {}).nombre, control: e.control, segundos: e.seg, fase: e.fase, queFallo: e.que, porQue: e.porque, senalIgnorada: e.senal, senal: [e.senalTipo, e.senalTxt].filter(Boolean).join(' · '), quePaso: e.paso, aprendizaje: e.accion }));
+  const errs = Array.from(S.errors.values()).map(e => compact({ carrera: (S.races.get(e.carreraId) || {}).nombre, control: e.control, segundos: e.seg, fase: faseTxt(e), queFallo: e.que, porQue: e.porque, senalIgnorada: e.senal, senal: [e.senalTipo, e.senalTxt].filter(Boolean).join(' · '), quePaso: e.paso, aprendizaje: e.accion }));
   let data = JSON.stringify({ carreras: races, errores: errs });
   if (data.length > 48000) data = data.slice(0, 48000);
   return 'Eres un entrenador de orientación (el deporte) que analiza el diario de un orientador de nivel internacional. Contesta en español, de tú, en 80-180 palabras, con cifras concretas de sus datos y una recomendación práctica al final. Texto plano sin Markdown (puedes usar guiones para listas). Si los datos no bastan para responder, dilo.\n\n' +
@@ -1386,8 +1453,8 @@ VIEWS.datos = function () {
   const c = S.config;
   const warm = (c.calentamiento || []).slice().sort((a, b) => (+b.min || 0) - (+a.min || 0));
   return '<header class="page-h"><p class="eyebrow">Tus datos</p><h1 class="h-display">Datos y ajustes</h1></header>' +
-    '<section class="card"><h2 class="h-3">Dónde se guarda</h2><p>Todo se guarda en este dispositivo: carreras, errores, mapas y anotaciones. Nadie más lo ve y funciona sin conexión. Si borras los datos del navegador o pierdes el móvil sin copia, se pierde: haz copias de vez en cuando.</p><div id="d-storage">' + storageHtml() + '</div></section>' +
-    '<section class="card"><h2 class="h-3">Copias y Excel</h2><p class="muted small">El Excel trae una hoja de carreras y otra de errores para leer o trabajar, y la hoja «Datos (no editar)», que sirve para restaurarlo todo en otro dispositivo. Los mapas solo van en la copia completa.</p><p class="small">' + esc(lastCopyText()) + '</p>' +
+    '<section class="card"><h2 class="h-3">Dónde se guarda</h2><p>Todo se guarda en este dispositivo: carreras, errores, mapas, fotos y anotaciones. Nadie más lo ve y funciona sin conexión. Si borras los datos del navegador o pierdes el móvil sin copia, se pierde: haz copias de vez en cuando.</p><div id="d-storage">' + storageHtml() + '</div></section>' +
+    '<section class="card"><h2 class="h-3">Copias y Excel</h2><p class="muted small">El Excel trae una hoja de carreras y otra de errores para leer o trabajar, y la hoja «Datos (no editar)», que sirve para restaurarlo todo en otro dispositivo. Los mapas y las fotos solo van en la copia completa.</p><p class="small">' + esc(lastCopyText()) + '</p>' +
     '<div class="btn-grid"><button type="button" class="btn btn-primary" data-act="exp-xlsx">Excel</button><button type="button" class="btn" data-act="exp-full">Copia completa con mapas</button><button type="button" class="btn" data-act="exp-carreras">Carreras (CSV)</button><button type="button" class="btn" data-act="exp-errores">Errores (CSV)</button></div><div id="exp-full"></div></section>' +
     '<section class="card"><h2 class="h-3">Restaurar una copia</h2><p class="muted small">Elige un Excel o una copia completa hechos con esta app. Añade o reemplaza las carreras, errores y mapas con el mismo identificador; no borra nada más.</p><div class="row-gap"><label class="btn btn-ghost" for="imp-file">Elegir Excel o copia</label><input type="file" id="imp-file" accept=".xlsx,.json,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden></div><div id="imp-confirm"></div></section>' +
     '<section class="card"><h2 class="h-3">Ajustes</h2><div class="form">' +
@@ -1413,7 +1480,7 @@ async function saveFile(filename, data) {
   try { await dl.save({ filename, data }); } catch (e) { const c = e && e.code; if (c === 'declined') return; toast(c === 'rate_limited' ? 'Ya hay una descarga esperando tu confirmación.' : 'No se pudo preparar la descarga.'); }
 }
 function carrerasRows() {
-  const rows = [['Fecha', 'Carrera', 'Tipo', 'Estado', 'Zona', 'Tiempo', 'Gap al 1.º', 'Puesto', 'Km', 'Desnivel', 'Controles', 'Físico', 'Técnico', 'Mental', 'Energía antes', 'Confianza antes', 'Hora de salida', 'Objetivo', 'Foco', '¿Foco cumplido?', 'Plan', 'Cómo me sentía', 'Lo que funcionó', 'Lección', 'Nº errores', 'Perdido en errores', '% del gap', 'Veredicto', 'Splits', 'Track']];
+  const rows = [['Fecha', 'Carrera', 'Tipo', 'Estado', 'Zona', 'Tiempo', 'Gap al 1.º', 'Puesto', 'Km', 'Desnivel', 'Controles', 'Físico', 'Técnico', 'Mental', 'Sensación física antes', 'Confianza antes', 'Hora de salida', 'Objetivo', 'Foco', '¿Foco cumplido?', 'Plan', 'Cómo me sentía', 'Lo que funcionó', 'Lección', 'Nº errores', 'Perdido en errores', '% del gap', 'Veredicto', 'Splits', 'Track']];
   const custom = cfgPrevia().filter(b => b.id.indexOf('b-') === 0 && ['linea', 'texto', 'escala'].indexOf(b.tipo) >= 0);
   custom.forEach(b => rows[0].push(b.titulo || 'Caja'));
   racesArr().forEach(r => { const st = statsOf(r); const a = r.antes || {}, re = r.resultado || {}, en = r.enlaces || {}; rows.push([r.fecha, r.nombre, r.tipo, estadoDe(r), r.zona, fmtT(re.tiempoS), fmtT(re.gapS), re.puesto, fmtNum(r.km, 2), r.desnivel, r.controles, re.fisico, re.tecnico, re.mental, a.energia, a.confianza, a.hora, a.objetivo, a.foco, re.focoCumplido, a.plan, a.sensaciones, re.funciono, re.leccion, st.errs.length, st.errs.length ? fmtT(st.lost) : '', st.pctGap != null ? fmtNum(st.pctGap, 0) : '', st.v ? st.v.label : '', en.splits, en.track].concat(custom.map(b => a[b.id]))); });
@@ -1422,7 +1489,7 @@ function carrerasRows() {
 function exportCarreras() { saveFile('carreras-orientacion.csv', csv(carrerasRows())); }
 function erroresRows() {
   const rows = [['Fecha', 'Carrera', 'Tipo', 'Control', 'Segundos', 'Fase', 'Qué falló', 'Por qué', 'Señal ignorada', 'Qué señal', 'Detalle de la señal', 'Qué pasó', 'Aprendizaje']];
-  racesArr().forEach(r => errsOf(r.id).forEach(e => rows.push([r.fecha, r.nombre, r.tipo, e.control, e.seg, e.fase, e.que, e.porque, e.senal ? 'Sí' : 'No', e.senal ? e.senalTipo : '', e.senal ? e.senalTxt : '', e.paso, e.accion])));
+  racesArr().forEach(r => errsOf(r.id).forEach(e => rows.push([r.fecha, r.nombre, r.tipo, e.control, e.seg, faseTxt(e), e.que, e.porque, e.senal ? 'Sí' : 'No', e.senal ? e.senalTipo : '', e.senal ? e.senalTxt : '', e.paso, e.accion])));
   return rows;
 }
 function exportErrores() { saveFile('errores-orientacion.csv', csv(erroresRows())); }
@@ -1448,15 +1515,15 @@ function openSheet(html, label) {
   $('#sheet').hidden = false; document.body.classList.add('no-scroll');
   if (window.matchMedia('(min-width: 700px)').matches) setTimeout(() => { const f = $('#sheet-card input:not([type=checkbox]), #sheet-card textarea'); if (f) f.focus(); }, 30);
 }
-function closeSheet() { $('#sheet').hidden = true; $('#sheet-card').innerHTML = ''; if ($('#mapa').hidden) document.body.classList.remove('no-scroll'); S.errDraft = null; S.newRace = null; S.confirmDel = false; }
-const CG = { fase: { label: 'Fase', numbered: true }, que: { label: 'Qué falló' }, porque: { label: 'Por qué', sub: '(la causa de fondo: pregúntate «¿por qué?» hasta llegar a algo entrenable)' } };
+function closeSheet() { const D0 = S.errDraft; if (D0 && !D0.saved && D0.added && D0.added.length && S.cap.assets) D0.added.forEach(a => S.cap.assets.delete(a).catch(() => {})); $('#sheet').hidden = true; $('#sheet-card').innerHTML = ''; if ($('#mapa').hidden) document.body.classList.remove('no-scroll'); S.errDraft = null; S.newRace = null; S.confirmDel = false; }
+const CG = { fase: { label: 'Fase', numbered: true, multi: true, sub: '(marca todas las que toquen)' }, que: { label: 'Qué falló' }, porque: { label: 'Por qué', sub: '(la causa de fondo: pregúntate «¿por qué?» hasta llegar a algo entrenable)' } };
 function chipGroup(k, val) {
-  const g = CG[k]; const opts = taxVals(k).slice(); if (val && opts.indexOf(val) < 0) opts.push(val);
+  const g = CG[k]; const opts = taxVals(k).slice(); const sel = g.multi ? [].concat(val || []).filter(Boolean) : [val]; sel.forEach(v => { if (v && opts.indexOf(v) < 0) opts.push(v); });
   return '<legend>' + g.label + (g.sub ? ' <span class="muted" style="font-weight:500">' + g.sub + '</span>' : '') + '</legend><div class="chips" role="group" aria-label="' + esc(g.label) + '">' +
-    opts.map((o, i) => '<button type="button" class="chip" data-act="draft-pick" data-k="' + k + '" data-val="' + esc(o) + '" aria-pressed="' + (val === o) + '">' + (g.numbered ? '<span class="n">' + (i + 1) + '</span>' : '') + esc(o) + '</button>').join('') +
+    opts.map((o, i) => '<button type="button" class="chip" data-act="draft-pick" data-k="' + k + '"' + (g.multi ? ' data-multi="1"' : '') + ' data-val="' + esc(o) + '" aria-pressed="' + (sel.indexOf(o) >= 0) + '">' + (g.numbered ? '<span class="n">' + (i + 1) + '</span>' : '') + esc(o) + '</button>').join('') +
     '<button type="button" class="chip chip-sm" data-act="opt-new" data-k="' + k + '">+ Otro</button></div>' +
     '<div class="add-opt" id="opt-' + k + '" hidden><label class="sr" for="opt-in-' + k + '">Nuevo tipo</label><input id="opt-in-' + k + '" data-optnew="' + k + '" placeholder="Nombre del nuevo tipo" autocomplete="off"><button type="button" class="btn btn-sm" data-act="opt-add" data-k="' + k + '">Añadir</button></div>' +
-    '<p class="chip-desc" id="desc-' + k + '">' + esc(taxDesc(k, val)) + '</p>';
+    '<p class="chip-desc" id="desc-' + k + '">' + esc(g.multi ? sel.map(v => taxDesc(k, v)).filter(Boolean).join(' · ') : taxDesc(k, val)) + '</p>';
 }
 function senalBox(e) {
   const opts = taxVals('senal'); const v = e.senalTipo || ''; const other = v && opts.indexOf(v) < 0;
@@ -1464,11 +1531,25 @@ function senalBox(e) {
     '<label class="sr" for="s-senal-otra">Otra señal</label><input id="s-senal-otra" placeholder="Escribe la señal" autocomplete="off" hidden>' +
     '<label class="sr" for="s-senal-txt">Detalle de la señal</label><input id="s-senal-txt" value="' + esc(e.senalTxt || '') + '" placeholder="Qué notaste exactamente (opcional)" autocomplete="off"></div>';
 }
+function errPhotosHtml() {
+  const D = S.errDraft; const f = D ? D.d.fotos || [] : [];
+  return '<div class="ph-row">' + f.map(a => '<span class="ph"><button type="button" class="ph-b" data-act="photo-view" data-id="' + esc(a) + '" aria-label="Ampliar foto"><img src="' + esc(window.__ODB.url(a)) + '" alt="" data-fallback></button><button type="button" class="ph-x" data-act="photo-del" data-id="' + esc(a) + '" aria-label="Quitar foto">×</button></span>').join('') +
+    (S.cap.assets ? '<label class="ph-add file-btn"><span>+ Foto</span><input type="file" id="err-photo-in" class="file-in" accept="image/*" multiple></label>' : '') + '</div><p class="hint" id="ph-st" aria-live="polite">Recorte del mapa, foto del terreno, captura de Livelox…</p>';
+}
+async function onErrPhotos(files) {
+  const D = S.errDraft; if (!D || !S.cap.assets) return; const st = () => $('#ph-st');
+  for (let i = 0; i < files.length; i++) {
+    const s = st(); if (s) s.textContent = 'Subiendo foto ' + (i + 1) + ' de ' + files.length + '…';
+    try { const p = await prepImage(files[i]); const up = await S.cap.assets.upload(p.blob, { type: p.type }); if (S.errDraft !== D) { S.cap.assets.delete(up.id).catch(() => {}); return; } D.d.fotos.push(up.id); D.added.push(up.id); const b = $('#err-photos'); if (b) b.innerHTML = errPhotosHtml(); }
+    catch (e) { console.warn(e); const s2 = st(); if (s2) s2.textContent = 'No se pudo añadir una foto: ' + uploadErrMsg(e); return; }
+  }
+}
 function openErrorSheet(id, preset) {
   const src = id ? S.errors.get(id) : null;
-  const e = src ? clone(src) : { carreraId: S.raceId, control: preset ? preset.c : '', seg: preset ? preset.s : '', fase: '', que: '', porque: '', senal: false, paso: '', accion: '' };
+  const e = src ? clone(src) : { carreraId: S.raceId, control: preset ? preset.c : '', seg: preset ? preset.s : '', fase: [], que: '', porque: '', senal: false, paso: '', accion: '' };
   delete e.id;
-  S.errDraft = { id: id || null, d: e };
+  if (!Array.isArray(e.fotos)) e.fotos = [];
+  S.errDraft = { id: id || null, d: e, added: [], removed: [] };
   let mapLink = '';
   if (id) { mapsOf(e.carreraId).forEach(m => (m.notas || []).forEach(n => { if (n.err === id && !mapLink) mapLink = '<button type="button" class="btn btn-ghost" data-act="map-open" data-id="' + esc(m.id) + '" data-note="' + n.n + '">Ver nota ' + n.n + ' en ' + esc(m.nombre || 'el mapa') + '</button>'; })); }
   openSheet('<div class="sheet-h"><h2 class="h-2">' + (id ? 'Error en ' + esc(e.control) : 'Nuevo error') + '</h2><button type="button" class="icon-btn" data-act="sheet-close" aria-label="Cerrar">×</button></div>' +
@@ -1478,6 +1559,7 @@ function openErrorSheet(id, preset) {
     '<div id="senal-box"' + (e.senal ? '' : ' hidden') + '>' + senalBox(e) + '</div>' +
     '<div class="field"><label for="s-paso">Qué pasó</label><textarea id="s-paso" rows="3">' + esc(e.paso) + '</textarea></div>' +
     '<div class="field"><label for="s-accion">Aprendizaje</label><textarea id="s-accion" rows="2" placeholder="Qué me llevo de este error para la próxima vez">' + esc(e.accion) + '</textarea></div>' +
+    '<div class="field"><span class="lbl">Fotos</span><div id="err-photos">' + errPhotosHtml() + '</div></div>' +
     mapLink + '<p class="err-msg" id="s-msg"></p><div id="s-confirm"></div>' +
     '<div class="sheet-actions">' + (id ? '<button type="button" class="btn btn-danger-ghost" data-act="err-del">Borrar</button>' : '') + '<span class="sp"></span><button type="button" class="btn btn-ghost" data-act="sheet-close">Cancelar</button><button type="button" class="btn btn-primary" data-act="err-save">Guardar error</button></div>', 'Error');
 }
@@ -1488,7 +1570,9 @@ function raceFormHtml(r, isNew) {
     '<div class="grid-2"><div class="field"><label for="s-fecha">Fecha</label><input id="s-fecha" type="date" value="' + esc(r.fecha || todayStr()) + '"></div>' +
     (isNew ? '<div class="field"><label for="s-hora">Hora de salida</label><input id="s-hora" type="time" value=""></div>' : '<div class="field"><label for="s-zona">Zona o mapa</label><input id="s-zona" value="' + esc(r.zona || '') + '" autocomplete="off"></div>') + '</div>' +
     '<fieldset class="field"><legend>Tipo</legend><div class="chips" role="group" aria-label="Tipo">' + TIPOS.map(t => '<button type="button" class="chip chip-sm" data-act="draft-pick" data-k="tipo" data-val="' + esc(t) + '" aria-pressed="' + (d.tipo === t) + '">' + esc(t) + '</button>').join('') + '</div></fieldset>' +
-    (isNew ? '<div class="field"><label for="s-zona">Zona o mapa</label><input id="s-zona" value="" placeholder="Opcional" autocomplete="off"></div>' : '') +
+    (isNew ? '<div class="field"><label for="s-zona">Zona</label><input id="s-zona" value="" placeholder="Opcional" autocomplete="off"></div>' +
+      '<fieldset class="field"><legend>Cuenta atrás</legend><div class="sec" style="gap:8px" id="nr-cd">' + nrCdHtml() + '</div></fieldset>' +
+      '<div class="field"><span class="lbl">Mapa de la carrera</span><div class="row-gap"><label class="btn btn-ghost file-btn">Elegir mapa<input type="file" id="nr-map" class="file-in" accept="image/*,application/pdf"></label><span class="hint" id="nr-map-n">Opcional. Saldrá de portada de la carrera.</span></div></div>' : '') +
     '<p class="err-msg" id="s-msg"></p><div id="s-confirm"></div>' +
     '<div class="sheet-actions">' + (isNew ? '' : '<button type="button" class="btn btn-danger-ghost" data-act="race-del-ask">Borrar carrera</button>') + '<span class="sp"></span><button type="button" class="btn btn-ghost" data-act="sheet-close">Cancelar</button><button type="button" class="btn btn-primary" data-act="' + (isNew ? 'race-create' : 'race-save') + '">' + (isNew ? 'Crear carrera' : 'Guardar') + '</button></div>';
 }
@@ -1512,7 +1596,7 @@ function refreshDetail() {
   const rs = $('#resumen'); if (rs) rs.innerHTML = resumenHtml(r);
 }
 function onData() {
-  if (!S.ready) { if (S.loaded.carreras && S.loaded.errores && S.loaded.mapas && S.loaded.config) { S.ready = true; autoEstado(); render(); } return; }
+  if (!S.ready) { if (S.loaded.carreras && S.loaded.errores && S.loaded.mapas && S.loaded.config) { S.ready = true; migrate31(); autoEstado(); render(); } return; }
   if (S.view === 'inicio' || S.view === 'carreras') render();
   else if (S.view === 'temporada') { const b = $('#t-body'); if (b) b.innerHTML = tBody(); const f = $('#t-filters'); if (f) f.innerHTML = tFilters(); }
   else if (S.view === 'datos') { const d = $('#d-storage'); if (d) d.innerHTML = storageHtml(); }
@@ -1567,13 +1651,21 @@ A.set = t => {
   if (path === 'estado') { const h = $('#det-h'); if (h) h.innerHTML = detHeader(r); }
 };
 A['use-foco'] = t => { const i = document.getElementById(t.dataset.target || 'f-antes-foco'); if (i) { i.value = t.dataset.val; onFieldInput(i, true); } };
-A['new-race'] = () => { S.newRace = { d: { tipo: '' } }; openSheet(raceFormHtml({}, true), 'Nueva carrera'); };
+A['new-race'] = () => { S.newRace = { d: { tipo: '' }, steps: sortSteps(clone(warmDefault(''))), cdTouched: false, mapFile: null }; openSheet(raceFormHtml({}, true), 'Nueva carrera'); };
 A['edit-race'] = () => { const r = curRace(); if (!r) return; S.newRace = { d: { tipo: r.tipo || '' } }; openSheet(raceFormHtml(r, false), 'Datos de la carrera'); };
 A['draft-pick'] = t => {
   const D = S.errDraft || S.newRace; if (!D) return;
-  const k = t.dataset.k, v = t.dataset.val; D.d[k] = D.d[k] === v ? '' : v;
+  const k = t.dataset.k, v = t.dataset.val;
+  if (t.dataset.multi) {
+    const a = [].concat(D.d[k] || []).filter(Boolean); const i = a.indexOf(v); if (i >= 0) a.splice(i, 1); else a.push(v); D.d[k] = a;
+    $$('[data-act="draft-pick"]').forEach(b => { if (b.dataset.k === k) b.setAttribute('aria-pressed', String(a.indexOf(b.dataset.val) >= 0)); });
+    const de = document.getElementById('desc-' + k); if (de) de.textContent = a.map(x => taxDesc(k, x)).filter(Boolean).join(' · ');
+    return;
+  }
+  D.d[k] = D.d[k] === v ? '' : v;
   $$('[data-act="draft-pick"]').forEach(b => { if (b.dataset.k === k) b.setAttribute('aria-pressed', String(b.dataset.val === D.d[k])); });
   const de = document.getElementById('desc-' + k); if (de) de.textContent = CG[k] ? taxDesc(k, D.d[k]) : '';
+  if (k === 'tipo' && S.newRace && D === S.newRace && !S.newRace.cdTouched) { S.newRace.steps = sortSteps(clone(warmDefault(D.d.tipo))); const b = $('#nr-cd'); if (b) b.innerHTML = nrCdHtml(); }
 };
 A['race-create'] = async () => {
   const nombre = $('#s-nombre').value.trim(), fecha = $('#s-fecha').value, hora = $('#s-hora').value, zona = $('#s-zona').value.trim();
@@ -1582,10 +1674,14 @@ A['race-create'] = async () => {
   const id = 'c-' + fecha.replace(/-/g, '') + '-' + slug(nombre).slice(0, 24) + '-' + Math.random().toString(36).slice(2, 6);
   const estado = fecha >= todayStr() ? 'Próxima' : 'Por analizar';
   const doc = { nombre, fecha, estado, creado: new Date().toISOString() };
-  if (S.newRace.d.tipo) doc.tipo = S.newRace.d.tipo; if (zona) doc.zona = zona; if (hora) doc.antes = { hora };
+  if (S.newRace.d.tipo) doc.tipo = S.newRace.d.tipo; if (zona) doc.zona = zona;
+  const steps = sortSteps(S.newRace.steps.filter(s => s.txt || s.min !== '')).map(s => ({ min: +s.min || 0, txt: s.txt }));
+  doc.antes = { calentamiento: steps }; if (hora) doc.antes.hora = hora;
+  const mapFile = S.newRace.mapFile;
   S.races.set(id, Object.assign({ id }, clone(doc)));
   closeSheet(); go('carrera', { id, tab: estado === 'Próxima' ? 'antes' : 'resultado' });
   if (await write(() => Store.set('carreras', id, doc))) toast('Carrera creada');
+  if (mapFile) onMapFile(mapFile, { noOpen: true });
 };
 A['race-save'] = async () => {
   const r = curRace(); if (!r) return;
@@ -1601,7 +1697,7 @@ A['race-del-no'] = () => { $('#s-confirm').innerHTML = ''; };
 A['race-del'] = async () => {
   const r = curRace(); if (!r) return; const errs = errsOf(r.id), maps = mapsOf(r.id);
   closeSheet();
-  for (const e of errs) await write(() => Store.del('errores', e.id));
+  for (const e of errs) { if (S.cap.assets) (e.fotos || []).forEach(a => S.cap.assets.delete(a).catch(() => {})); await write(() => Store.del('errores', e.id)); }
   for (const m of maps) { if (S.cap.assets && m.assetId) { try { await S.cap.assets.delete(m.assetId); } catch (e) { /* the row goes anyway */ } } await write(() => Store.del('mapas', m.id)); }
   S.races.delete(r.id); go('carreras');
   if (await write(() => Store.del('carreras', r.id))) toast('Carrera borrada');
@@ -1626,11 +1722,13 @@ A['err-save'] = async () => {
   if (!doc.creado) doc.creado = new Date().toISOString();
   const id = D.id || uid('e');
   S.errors.set(id, Object.assign({ id }, clone(doc)));
-  closeSheet(); refreshDetail();
-  if (await write(() => Store.set('errores', id, doc))) toast(D.id ? 'Error actualizado' : 'Error guardado');
+  D.saved = true; closeSheet(); refreshDetail();
+  if (await write(() => Store.set('errores', id, doc))) { toast(D.id ? 'Error actualizado' : 'Error guardado'); if (S.cap.assets) D.removed.forEach(a => S.cap.assets.delete(a).catch(() => {})); }
 };
 A['err-del'] = () => { $('#s-confirm').innerHTML = '<div class="confirm"><p>¿Borrar este error?</p><div class="row-end"><button type="button" class="btn btn-ghost btn-sm" data-act="race-del-no">No</button><button type="button" class="btn btn-danger btn-sm" data-act="err-del-go">Borrar</button></div></div>'; };
-A['err-del-go'] = async () => { const D = S.errDraft; if (!D || !D.id) return; const id = D.id; S.errors.delete(id); closeSheet(); refreshDetail(); if (await write(() => Store.del('errores', id))) toast('Error borrado'); };
+A['photo-del'] = t => { const D = S.errDraft; if (!D) return; const a = t.dataset.id; D.d.fotos = (D.d.fotos || []).filter(x => x !== a); if (D.added.indexOf(a) >= 0) { D.added = D.added.filter(x => x !== a); S.cap.assets.delete(a).catch(() => {}); } else D.removed.push(a); const b = $('#err-photos'); if (b) b.innerHTML = errPhotosHtml(); };
+A['photo-view'] = t => { const lb = document.createElement('div'); lb.className = 'lightbox'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Foto'); lb.innerHTML = '<img src="' + esc(window.__ODB.url(t.dataset.id)) + '" alt=""><button type="button" class="lb-x" aria-label="Cerrar">×</button>'; lb.addEventListener('click', ev => { ev.stopPropagation(); lb.remove(); }); document.body.appendChild(lb); };
+A['err-del-go'] = async () => { const D = S.errDraft; if (!D || !D.id) return; const id = D.id; const old = S.errors.get(id); S.errors.delete(id); if (S.cap.assets) [].concat((old && old.fotos) || [], D.added || []).forEach(a => S.cap.assets.delete(a).catch(() => {})); D.saved = true; closeSheet(); refreshDetail(); if (await write(() => Store.del('errores', id))) toast('Error borrado'); };
 A['sheet-close'] = () => closeSheet();
 A['edit-focos'] = () => {
   const f = (S.config.focos || []).concat(['', '', '']).slice(0, 3);
@@ -1703,6 +1801,7 @@ A['cfg-save'] = async () => {
   const calentamiento = $$('.warm-row').map(row => ({ min: Math.max(0, parseInt($('[data-w="min"]', row).value, 10) || 0), txt: $('[data-w="txt"]', row).value.trim() })).filter(x => x.txt);
   await saveConfig({ corredor, umbral, calentamiento }, 'Ajustes guardados');
 };
+A['set-cover'] = async t => { const r = curRace(); if (!r) return; r.portada = t.dataset.id; refreshDetail(); if (await write(() => Store.update('carreras', r.id, { portada: t.dataset.id }))) toast('Portada cambiada'); };
 A['map-open'] = t => { closeSheet(); mapOpen(t.dataset.id, t.dataset.note ? +t.dataset.note : null); };
 A['ante-mode'] = t => { S.anteMode = t.dataset.m; flushAll(); const b = $('#det-body'); if (b && curRace()) b.innerHTML = tabBody(curRace()); };
 /* checklist */
@@ -1724,6 +1823,10 @@ function rwEdit(el) {
 }
 A['rw-add'] = () => { const r = curRace(); if (!r || !S.rw) return; setRaceField('antes.calentamiento', clone(S.rw.steps.concat([{ min: '', txt: '' }])), true); const hb = $('#horario'); if (hb) { hb.innerHTML = warmEditHtml(r); const ins = $$('#horario [data-wk="min"]'); if (ins.length) ins[ins.length - 1].focus(); } };
 A['rw-del'] = t => { const r = curRace(); if (!r || !S.rw) return; setRaceField('antes.calentamiento', clone(S.rw.steps.filter((_, i) => i !== +t.dataset.i)), true); const hb = $('#horario'); if (hb) hb.innerHTML = warmEditHtml(r); };
+A['rw-mv'] = t => { const r = curRace(); if (!r || !S.rw) return; const st = moveTxt(clone(S.rw.steps), +t.dataset.i, +t.dataset.d); setRaceField('antes.calentamiento', st, true); const hb = $('#horario'); if (hb) hb.innerHTML = warmEditHtml(r); };
+A['nr-mv'] = t => { if (!S.newRace) return; S.newRace.steps = moveTxt(S.newRace.steps, +t.dataset.i, +t.dataset.d); S.newRace.cdTouched = true; const b = $('#nr-cd'); if (b) b.innerHTML = nrCdHtml(); };
+A['nr-add'] = () => { if (!S.newRace) return; S.newRace.steps.push({ min: '', txt: '' }); S.newRace.cdTouched = true; const b = $('#nr-cd'); if (b) { b.innerHTML = nrCdHtml(); const ins = $$('#nr-cd [data-nk="min"]'); if (ins.length) ins[ins.length - 1].focus(); } };
+A['nr-del'] = t => { if (!S.newRace) return; S.newRace.steps.splice(+t.dataset.i, 1); S.newRace.cdTouched = true; const b = $('#nr-cd'); if (b) b.innerHTML = nrCdHtml(); };
 A['rw-reset'] = () => { const r = curRace(); if (!r) return; setRaceField('antes.calentamiento', null, true); const hb = $('#horario'); if (hb) hb.innerHTML = warmEditHtml(r); };
 A['rw-def'] = async t => {
   const r = curRace(); if (!r || !S.rw) return;
@@ -1798,9 +1901,9 @@ A['tax-save'] = async () => {
 A['opt-new'] = t => { const box = document.getElementById('opt-' + t.dataset.k); if (box) { box.hidden = false; const i = box.querySelector('input'); if (i) i.focus(); } };
 A['opt-add'] = async t => {
   const k = t.dataset.k; const inp = document.getElementById('opt-in-' + k); const v = inp ? inp.value.trim() : ''; if (!v || !S.errDraft) return;
-  const ex = taxVals(k).find(x => x.toLowerCase() === v.toLowerCase()); const val = ex || v; S.errDraft.d[k] = val;
+  const ex = taxVals(k).find(x => x.toLowerCase() === v.toLowerCase()); const val = ex || v; if (k === 'fase') { const a = fasesOf(S.errDraft.d); if (a.indexOf(val) < 0) a.push(val); S.errDraft.d.fase = a; } else S.errDraft.d[k] = val;
   let p = null; if (!ex) p = saveConfig({ tax: Object.assign({}, S.config.tax || {}, { [k]: tax(k).concat([{ v }]) }) }, 'Añadido «' + v + '»');
-  const fs = document.getElementById('cg-' + k); if (fs) fs.innerHTML = chipGroup(k, val);
+  const fs = document.getElementById('cg-' + k); if (fs) fs.innerHTML = chipGroup(k, S.errDraft.d[k]);
   if (p) await p;
 };
 /* splits from a pasted table */
@@ -1835,6 +1938,9 @@ document.addEventListener('input', e => {
   const el = e.target;
   if (el.dataset && el.dataset.f) onFieldInput(el, false);
   else if (el.dataset && el.dataset.wi != null) rwEdit(el);
+  else if (el.dataset && el.dataset.ni != null) nrEdit(el);
+  else if (el.id === 's-hora' && S.newRace) { const b = $('#nr-cd'); if (b) b.innerHTML = nrCdHtml(); }
+  else if (el.id === 'mg-q') { S.mgq = el.value; const g = $('#mg-grid'); if (g) g.innerHTML = galleryGrid(); }
   else if (el.dataset && el.dataset.pk && S.pvDraft) { const b = S.pvDraft[+el.dataset.pi]; if (b) b[el.dataset.pk] = el.value; }
   else if (el.dataset && el.dataset.tk && el.type !== 'checkbox') txEdit(el);
   else if (el.id === 'paste-txt') S.paste.text = el.value;
@@ -1855,6 +1961,10 @@ document.addEventListener('change', e => {
   else if (el.id === 's-senal-tipo') { const o = $('#s-senal-otra'); if (o) { o.hidden = el.value !== '__otra'; if (!o.hidden) o.focus(); } }
   else if (el.id === 'xml-file' && el.files[0]) { onXmlFile(el.files[0]); el.value = ''; }
   else if (el.id === 'map-file' && el.files[0]) { onMapFile(el.files[0]); el.value = ''; }
+  else if (el.dataset && el.dataset.ni != null && el.dataset.nk === 'min' && S.newRace) { sortSteps(S.newRace.steps); const b = $('#nr-cd'); if (b) b.innerHTML = nrCdHtml(); }
+  else if (el.id === 'cover-file' && el.files[0]) { onMapFile(el.files[0], { noOpen: true }); el.value = ''; }
+  else if (el.id === 'nr-map' && el.files[0] && S.newRace) { S.newRace.mapFile = el.files[0]; const n = $('#nr-map-n'); if (n) n.textContent = el.files[0].name; }
+  else if (el.id === 'err-photo-in' && el.files.length) { onErrPhotos(Array.from(el.files)); el.value = ''; }
   else if (el.id === 'imp-file' && el.files[0]) { onImportFile(el.files[0]); el.value = ''; }
   else if (el.id === 'xml-class' && S.xml) { S.xml.ci = +el.value; S.xml.ri = 0; S.xml.note = ''; const b = $('#splits-box'); if (b) b.innerHTML = splitsHtml(curRace()); }
   else if (el.id === 'xml-runner' && S.xml) { S.xml.ri = +el.value; S.xml.note = ''; const p = $('#xml-preview'); if (p) p.innerHTML = xmlPreview(); }
@@ -1920,7 +2030,7 @@ function uploadErrMsg(e) {
   if (e && e.message === 'pdf') return 'No pude abrir el PDF. Prueba con una captura del mapa.';
   return 'No se pudo subir el mapa' + (c ? ' (motivo: ' + c + ')' : (e && e.message ? ' (' + e.message + ')' : '')) + '. Vuelve a intentarlo.';
 }
-async function onMapFile(file) {
+async function onMapFile(file, opts) {
   const st = $('#map-status'); const set = (t, bad) => { if (st) { st.textContent = t; st.className = bad ? 'err-msg' : 'hint'; } };
   if (!S.cap.assets) { set('Esta vista no permite subir mapas.', true); return; }
   const raceId = S.raceId; set('Preparando el mapa…');
@@ -1936,7 +2046,8 @@ async function onMapFile(file) {
     S.maps.set(id, Object.assign({ id }, clone(doc)));
     const ok = await write(() => Store.set('mapas', id, doc));
     set(ok ? (p.pages > 1 ? 'Usé la página 1 del PDF.' : '') : '');
-    if (ok) { refreshDetail(); mapOpen(id); }
+    const rc = S.races.get(raceId); if (ok && rc && !(rc.portada && S.maps.get(rc.portada))) { rc.portada = id; write(() => Store.update('carreras', raceId, { portada: id })); }
+    if (ok) { if (S.view === 'carrera') refreshDetail(); if (!(opts && opts.noOpen)) mapOpen(id); }
   } catch (e) { console.warn(e); set(uploadErrMsg(e), true); }
 }
 
@@ -2275,7 +2386,7 @@ const XL = (function () {
 })();
 
 /* ---------- local app: Excel, full copies, backup reminder, AI copy, install ---------- */
-const APP_VERSION = '3.0';
+const APP_VERSION = '3.1';
 const DATA_SHEET = 'Datos (no editar)';
 function dataRows() {
   const rows = [['coleccion', 'id', 'datos']]; const CH = 30000;
@@ -2314,13 +2425,14 @@ async function exportFull() {
   const strip = m => Array.from(m.values()).map(clone);
   const cfg = clone(S.config); delete cfg.id;
   const assets = []; const seen = new Set();
-  for (const m of S.maps.values()) {
-    if (!m.assetId || seen.has(m.assetId)) continue; seen.add(m.assetId);
-    try { const b = await window.__ODB.getBlob(m.assetId); if (b) assets.push({ id: m.assetId, type: b.type, b64: await blobToB64(b) }); } catch (e) { /* skip this image */ }
+  const ids = []; S.maps.forEach(m => { if (m.assetId) ids.push(m.assetId); }); S.errors.forEach(e => (e.fotos || []).forEach(a => ids.push(a)));
+  for (const a of ids) {
+    if (seen.has(a)) continue; seen.add(a);
+    try { const b = await window.__ODB.getBlob(a); if (b) assets.push({ id: a, type: b.type, b64: await blobToB64(b) }); } catch (e) { /* skip this image */ }
   }
   const data = { app: 'diario-orientacion', version: 1, exportado: new Date().toISOString(), carreras: strip(S.races), errores: strip(S.errors), mapas: strip(S.maps), config: cfg, assets };
   S.fullCopy = new Blob([JSON.stringify(data)], { type: 'application/json' });
-  if (box) box.innerHTML = '<div class="confirm"><p>Copia lista: ' + S.races.size + ' carreras, ' + S.errors.size + ' errores y ' + assets.length + ' mapas · ' + fmtBytes(S.fullCopy.size) + '.</p><div class="row-end"><button type="button" class="btn btn-primary btn-sm" data-act="exp-full-save">Guardar copia</button></div></div>';
+  if (box) box.innerHTML = '<div class="confirm"><p>Copia lista: ' + S.races.size + ' carreras, ' + S.errors.size + ' errores y ' + assets.length + ' imágenes · ' + fmtBytes(S.fullCopy.size) + '.</p><div class="row-end"><button type="button" class="btn btn-primary btn-sm" data-act="exp-full-save">Guardar copia</button></div></div>';
 }
 function daysSince(iso) { const t = Date.parse(iso || ''); return isNaN(t) ? null : Math.floor((Date.now() - t) / 86400000); }
 function lastCopyText() { const d = daysSince(S.config.ultimaCopia); return d == null ? 'Aún no has hecho ninguna copia.' : d === 0 ? 'Última copia: hoy.' : 'Última copia: hace ' + d + (d === 1 ? ' día.' : ' días.'); }
@@ -2362,7 +2474,7 @@ A['install'] = async () => { const e = window.__installEvt; if (!e) return; wind
 /* ---------- boot ---------- */
 async function useCap(name) { try { return (window.claude && typeof window.claude.use === 'function') ? await window.claude.use(name) : null; } catch (e) { return null; } }
 async function boot() {
-  const h = (location.hash || '').slice(1); if (['inicio', 'carreras', 'temporada', 'datos'].indexOf(h) >= 0) S.view = h;
+  const h = (location.hash || '').slice(1); if (['inicio', 'carreras', 'mapas', 'temporada', 'datos'].indexOf(h) >= 0) S.view = h;
   render();
   useCap('user').then(async u => { try { if (u && !(await u.canEdit())) showBanner('Estás viendo este diario en modo lectura: los cambios no se guardarán.'); } catch (e) { /* ignore */ } });
   Promise.all([useCap('assets'), useCap('downloads'), useCap('sample')]).then(r => {
